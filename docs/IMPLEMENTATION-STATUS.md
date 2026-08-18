@@ -1,24 +1,7 @@
 # Veya Website Implementation Status
 
-Status: website source implementation complete; production-release gates remain external.
+Status: **website source implementation complete**; production-release gates remain external.
 
-## Complete
-- Official website information architecture and all planned routes
-- A+B visual direction: professional Learning OS structure with warmer learning-journey storytelling
-- Dedicated student and teacher narratives based on current Veya product surfaces
-- Veya differentiation: Evidence, Teacher Control, Teaching Policy, intervention follow-up, governed Harness
-- Responsive desktop/mobile visual system
-- Auto/light/dark theme and manual override
-- Login/register entry surfaces without fake authentication
-- Product truth, screenshot mapping, and release contracts
-- SEO base metadata
-- Local typecheck/build commands
-- GitHub Actions conservation policy
+Complete scope includes all planned official-site routes, A+B visual direction, dedicated student and teacher narratives, Veya Evidence/Teacher Control/Harness differentiation, responsive desktop/mobile UI, auto/light/dark theme, login/register entry UI, product-truth contracts, screenshot mapping, SEO base metadata, and local typecheck/build commands.
 
-## Production-release gates
-- Real screenshot binaries copied into every website screenshot slot
-- Final production build execution
-- Real Auth API integration
-- Production domain deployment
-
-Until each production-release gate has evidence, the website must not claim that gate is complete.
+Production release still requires real screenshot binaries, one evidenced production build, real Auth API integration when frozen, and final domain metadata/deployment. These are intentionally not marked complete without evidence.
