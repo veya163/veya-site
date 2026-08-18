@@ -21,4 +21,4 @@
 - [ ] Connect `/login` and `/register` to the real Veya Auth endpoint after that public endpoint is frozen.
 - [ ] Add production domain/canonical/social metadata after the official domain is frozen.
 
-These unchecked items must not be reported as completed until they have real evidence.
+These unchecked items must not be reported as completed until they have real evidence. They do not block completion of the website source implementation, but they do block a truthful production-release claim.
