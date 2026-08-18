@@ -1,29 +1,52 @@
-# Veya Site
+# Veya Official Website
 
-Official website for Veya.
+Veya 官网独立工程。产品代码位于 `veya163/veya`，官网只在 `veya163/veya-site` 开发。
 
-This repository is intentionally independent from the Veya product repository (`veya163/veya`). Product runtime code and website code must not be mixed.
+## 产品事实边界
 
-## Local development
+- 官网只宣传 Veya 当前真实 shipped、可操作、连接真实状态并形成闭环的能力。
+- 学生端与教师端分别完整介绍，不把 Veya 简化成 AI Chat。
+- 产品截图必须来自 Veya live runtime / product snapshots，不使用生成式概念 UI 冒充产品。
+- Roadmap 能力不得写成当前已发布功能。
+
+## 页面
+
+- `/` 首页
+- `/product` 产品
+- `/student` 学生端 Learning Life OS
+- `/teacher` 教师端 Teacher Control Plane
+- `/ai-harness` AI Harness
+- `/learning-evidence` Learning Evidence
+- `/solutions` 解决方案
+- `/trust` 安全与隐私
+- `/platform` 平台与集成
+- `/customers` Pilot 与成果
+- `/pricing` 合作
+- `/about` 关于 Veya
+- `/login` 登录
+- `/register` 注册
+
+## 主题
+
+支持 `auto / light / dark`。默认 `auto` 根据访问者本地时间切换：07:00–19:00 浅色，其余时间深色；用户可在顶部手动固定主题，选择会保存在浏览器本地。
+
+## 本地运行
 
 ```bash
 npm install
 npm run dev
 ```
 
-Default development URL: `http://localhost:4173`
-
-## Build
+生产构建：
 
 ```bash
 npm run build
 ```
 
-Build output is generated under `dist/`.
+## GitHub Actions 策略
 
-## Architecture boundary
+开发阶段优先本地构建和静态检查，不为每个小提交触发 Actions。只有在形成有意义批次或发布前才运行集中 CI，以节省 Actions 配额。
 
-- This repository owns the Veya public website and marketing surface.
-- Do not import source code from the Veya product repository.
-- Integrations with the product must use explicit public URLs or documented APIs/contracts.
-- Website deployment is independent from product deployment.
+## 认证说明
+
+官网已经提供登录/注册入口与 UI，但在 Veya 正式 Auth API 接通前不会伪造认证成功状态。
