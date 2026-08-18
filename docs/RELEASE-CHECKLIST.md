@@ -19,4 +19,4 @@
 - [ ] Connect `/login` and `/register` to the real Veya Auth endpoint after that public endpoint is frozen.
 - [ ] Add production domain/canonical/social metadata after the official domain is frozen.
 
-Unchecked items must not be reported as completed without real evidence. They do not block source implementation closure, but they do block a production-release claim.
+Unchecked items must not be reported as completed without real evidence. They do not block source implementation closure, but they do block a production-release claim. Release verification should be batched to conserve GitHub Actions.
