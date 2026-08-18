@@ -5,4 +5,4 @@
 - `RELEASE-CHECKLIST.md` — source implementation completion and production-release gates
 - `IMPLEMENTATION-STATUS.md` — current website completion status
 
-The site repository is intentionally independent from the Veya product repository. Product facts and screenshots originate from the product repository, while website source code remains here.
+The site repository is intentionally independent from the Veya product repository. Product facts and screenshots originate from the product repository, while website source code remains here. Release checks are intentionally batched to conserve GitHub Actions.
