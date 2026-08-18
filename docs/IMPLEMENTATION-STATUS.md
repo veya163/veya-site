@@ -1,6 +1,6 @@
 # Veya Website Implementation Status
 
-Status: website application implementation complete; external release gates remain.
+Status: website source implementation complete; production-release gates remain external.
 
 ## Complete
 - Official website information architecture and all planned routes
@@ -15,10 +15,10 @@ Status: website application implementation complete; external release gates rema
 - Local typecheck/build commands
 - GitHub Actions conservation policy
 
-## External release gates
+## Production-release gates
 - Real screenshot binaries copied into every website screenshot slot
 - Final production build execution
 - Real Auth API integration
 - Production domain deployment
 
-Until each external gate has evidence, the website must not claim that gate is complete.
+Until each production-release gate has evidence, the website must not claim that gate is complete.
