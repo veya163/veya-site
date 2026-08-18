@@ -18,3 +18,5 @@ Website screenshot slots are mapped to current Veya product surfaces. Only verif
 | `teacher-policy.png` | AI Teaching Policy |
 
 Source of truth remains the `veya163/veya` live runtime and its verified product snapshot artifacts. A missing screenshot stays missing; it must never be replaced with generated UI.
+
+The website implementation references these exact paths, so screenshot replacement does not require changing page code.
