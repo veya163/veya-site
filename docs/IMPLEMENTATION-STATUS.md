@@ -15,10 +15,10 @@ Status: website application implementation complete; external release gates rema
 - Local typecheck/build commands
 - GitHub Actions conservation policy
 
-## Not claimed complete without external evidence
-- Real screenshot binaries copied into all website screenshot slots
+## External release gates
+- Real screenshot binaries copied into every website screenshot slot
 - Final production build execution
 - Real Auth API integration
 - Production domain deployment
 
-The website must remain truthful when any external release gate is incomplete.
+Until each external gate has evidence, the website must not claim that gate is complete.
