@@ -11,42 +11,24 @@ Veya 官网独立工程。产品代码位于 `veya163/veya`，官网只在 `veya
 
 ## 页面
 
-- `/` 首页
-- `/product` 产品
-- `/student` 学生端 Learning Life OS
-- `/teacher` 教师端 Teacher Control Plane
-- `/ai-harness` AI Harness
-- `/learning-evidence` Learning Evidence
-- `/solutions` 解决方案
-- `/trust` 安全与隐私
-- `/platform` 平台与集成
-- `/customers` Pilot 与成果
-- `/pricing` 合作
-- `/about` 关于 Veya
-- `/login` 登录
-- `/register` 注册
+`/`、`/product`、`/student`、`/teacher`、`/ai-harness`、`/learning-evidence`、`/solutions`、`/trust`、`/platform`、`/customers`、`/pricing`、`/about`、`/login`、`/register`。
 
 ## 主题
 
-支持 `auto / light / dark`。默认 `auto` 根据访问者本地时间切换：07:00–19:00 浅色，其余时间深色；用户可在顶部手动固定主题，选择会保存在浏览器本地。
+支持 `auto / light / dark`。默认 `auto` 根据访问者本地时间切换：07:00–19:00 浅色，其余时间深色；自动模式运行期间每分钟检查跨时段切换。用户可在顶部手动固定主题，选择保存在浏览器本地。
 
-## 本地运行
+## 本地运行与生产构建
 
 ```bash
 npm install
 npm run dev
-```
-
-生产构建：
-
-```bash
 npm run build
 ```
 
 ## GitHub Actions 策略
 
-开发阶段优先本地构建和静态检查，不为每个小提交触发 Actions。只有在形成有意义批次或发布前才运行集中 CI，以节省 Actions 配额。
+开发阶段优先本地构建和静态检查，不为每个小提交触发 Actions。只有形成有意义批次或发布前才运行集中 CI，以节省 Actions 配额。
 
 ## 认证说明
 
-官网已经提供登录/注册入口与 UI，但在 Veya 正式 Auth API 接通前不会伪造认证成功状态。
+官网提供登录/注册入口与 UI，但在 Veya 正式 Auth API 接通前不会伪造认证成功状态。
