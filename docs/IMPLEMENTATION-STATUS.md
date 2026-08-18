@@ -22,5 +22,3 @@ Status: website application implementation complete; external release gates rema
 - Production domain deployment
 
 Until each external gate has evidence, the website must not claim that gate is complete.
-
-Last implementation closure commit is tracked on `main`; no per-commit Actions workflow is required for this development loop.
