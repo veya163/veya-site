@@ -2,15 +2,6 @@ name: Deploy Veya Website
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - 'src/**'
-      - 'public/**'
-      - 'index.html'
-      - 'package.json'
-      - 'vite.config.ts'
-      - '.github/workflows/deploy-pages.yml'
 
 permissions:
   contents: read
