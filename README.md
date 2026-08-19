@@ -1,23 +1,29 @@
 # Veya Official Website
 
-Veya 官方网站独立工程。产品代码继续位于 `veya163/veya`，官网只位于 `veya163/veya-site`。
+Veya 官网独立工程，与 `veya163/veya` 产品仓库分离。
 
-## Architecture
+## Current implementation
 
-官网采用无构建依赖的静态模块架构：`index.html + assets/styles.css + assets/app.js`。这样 GitHub Pages 不依赖 npm/Vite/TypeScript，避免官网发布被工具链版本或 lockfile 阻塞。
+- Static official website: `index.html + assets/styles.css + assets/app.js`
+- Full official site routes: Home / Product / Student / Teacher / AI Harness / Learning Evidence / Solutions / Trust / Platform / Pilot / Pricing / About / Login / Register
+- Light / Dark / Auto theme; Auto uses visitor local time
+- Student and Teacher are explained independently
+- Website product screenshots are restricted to verified Veya live-runtime / product-snapshot sources
 
-## Pages
+## Verified screenshot locations
 
-Home / Product / Student / Teacher / AI Harness / Learning Evidence / Solutions / Trust & Safety / Platform & Integration / Pilot & Outcomes / Work with Veya / About / Login / Register。
+The canonical runtime assets used by the static website live in:
 
-## Theme
+- `assets/product-shots/student-home.webp`
+- `assets/product-shots/teacher-home.webp`
 
-默认 `auto`：访问者本地时间 07:00–19:00 使用浅色，其余时间深色；顶部可手动固定浅色或深色，选择保存在 localStorage。
+A compatibility mirror is also maintained under:
 
-## Product truth gate
+- `public/product-shots/student-home.webp`
+- `public/product-shots/teacher-home.webp`
 
-官网只宣传 Veya 当前真实可使用能力；学生端和教师端分别完整介绍。产品截图只允许来自 Veya live runtime / verified snapshot，不使用生成式概念 Dashboard 冒充产品。
+The `public/product-shots/` directory must not be left empty and must never contain generated concept dashboards.
 
 ## Deployment
 
-GitHub Pages 自动部署保持暂停。`.github/workflows/deploy-pages.yml` 仅支持手动 `workflow_dispatch`，完成验收后再触发。
+GitHub Pages deployment remains manual via `.github/workflows/deploy-pages.yml` to avoid unnecessary Actions usage.
