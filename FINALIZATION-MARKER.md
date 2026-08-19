@@ -1,1 +1,0 @@
-Final static site replacement prepared. This marker will be removed by the final atomic tree commit.

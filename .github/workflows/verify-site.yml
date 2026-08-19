@@ -1,36 +1,27 @@
 name: Verify Veya Website
 
 on:
-  push:
-    branches:
-      - verify/site
   workflow_dispatch:
 
 permissions:
   contents: read
 
-concurrency:
-  group: verify-site
-  cancel-in-progress: true
-
 jobs:
-  build:
+  verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 8
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      - name: Install dependencies
-        run: npm install --no-audit --no-fund
-      - name: Production build
-        run: npm run build
-      - name: Verify output
+      - uses: actions/checkout@v4
+      - name: Static website checks
         shell: bash
         run: |
-          test -f dist/index.html
-          test -d dist/assets
-          echo "Veya website production build verified."
+          set -euo pipefail
+          test -f index.html
+          test -f assets/app.js
+          test -f assets/styles.css
+          test -f assets/product-shots/student-home.webp
+          test -f assets/product-shots/teacher-home.webp
+          grep -q 'assets/app.js' index.html
+          grep -q 'Learning Evidence' assets/app.js
+          grep -q 'Teacher Control Plane' assets/app.js
+          grep -q 'Learning Life OS' assets/app.js
+          echo 'Veya static website checks passed.'
