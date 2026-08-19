@@ -9,7 +9,6 @@ on:
       - 'public/**'
       - 'index.html'
       - 'package.json'
-      - 'package-lock.json'
       - 'vite.config.ts'
       - '.github/workflows/deploy-pages.yml'
 
@@ -35,9 +34,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
       - name: Install
-        run: npm ci
+        run: npm install --no-audit --no-fund
       - name: Build
         run: npm run build
       - name: Setup Pages
