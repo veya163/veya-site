@@ -2,6 +2,10 @@ name: Deploy Veya Website
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.release-pages'
 
 permissions:
   contents: read
